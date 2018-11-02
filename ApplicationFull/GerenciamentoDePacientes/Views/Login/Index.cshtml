@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logar</title>
+    <link rel="stylesheet" href="~/Content/Css/bootstrap.css" />
+    <script type="text/javascript" src="~/Content/Script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/Script/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Content/Script/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="row justify-content-center" style="margin-top:15%">
+        <div class="col-lg-4 col-sm-12 bg-white" style="border-radius:20px; padding:7px">
+            <center>
+                <a href="~/Home/Index"><img src="~/Img/LogoLogin.png" width="150" height="100" style="margin-bottom:5px" /></a>
+
+                <form>
+                    <div class="form-group justify-content-center">
+                        <div class="input-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Usuario</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><img src="~/Content/Svg/si-glyph-person-2.svg" width="10" height="10" /></div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Usuario">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Senha</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><img src="~/Content/Svg/si-glyph-foot-sign.svg" width="10" height="10" /></div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Senha">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button class="btn btn-dark" type="button">Logar</button>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-dark" type="reset">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <p>Caso não tenha cadastro @Html.ActionLink("Clique Aqui", "Register", "Login") para se registrar.</p>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

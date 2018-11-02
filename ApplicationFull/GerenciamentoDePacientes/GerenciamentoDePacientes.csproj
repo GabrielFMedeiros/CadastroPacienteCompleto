@@ -1,0 +1,1049 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C37C4A83-635C-4981-85F0-FF8D989F7447}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GerenciamentoDePacientes</RootNamespace>
+    <AssemblyName>GerenciamentoDePacientes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\bootstrap-grid.css" />
+    <Content Include="Content\Css\bootstrap-grid.min.css" />
+    <Content Include="Content\Css\bootstrap-reboot.css" />
+    <Content Include="Content\Css\bootstrap-reboot.min.css" />
+    <Content Include="Content\Css\bootstrap.css" />
+    <Content Include="Content\Css\bootstrap.min.css" />
+    <Content Include="Content\Script\bootstrap.bundle.js" />
+    <Content Include="Content\Script\bootstrap.bundle.min.js" />
+    <Content Include="Content\Script\bootstrap.js" />
+    <Content Include="Content\Script\bootstrap.min.js" />
+    <Content Include="Content\Script\jquery-3.3.1.min.js" />
+    <Content Include="Content\Script\jquery-3.3.1.slim.min.js" />
+    <Content Include="Content\Svg\si-glyph-abacus.svg" />
+    <Content Include="Content\Svg\si-glyph-adjustment-horizon.svg" />
+    <Content Include="Content\Svg\si-glyph-air-balloon.svg" />
+    <Content Include="Content\Svg\si-glyph-airplane-2.svg" />
+    <Content Include="Content\Svg\si-glyph-airplane.svg" />
+    <Content Include="Content\Svg\si-glyph-alarm-clock.svg" />
+    <Content Include="Content\Svg\si-glyph-alien.svg" />
+    <Content Include="Content\Svg\si-glyph-aligh-left.svg" />
+    <Content Include="Content\Svg\si-glyph-align-center.svg" />
+    <Content Include="Content\Svg\si-glyph-align-left.svg" />
+    <Content Include="Content\Svg\si-glyph-align-right.svg" />
+    <Content Include="Content\Svg\si-glyph-ambulance.svg" />
+    <Content Include="Content\Svg\si-glyph-anchor.svg" />
+    <Content Include="Content\Svg\si-glyph-android.svg" />
+    <Content Include="Content\Svg\si-glyph-angle-1.svg" />
+    <Content Include="Content\Svg\si-glyph-angle-2.svg" />
+    <Content Include="Content\Svg\si-glyph-antenna-1.svg" />
+    <Content Include="Content\Svg\si-glyph-apron.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-backward.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-change.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-circle-rycycle.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-forward.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-four-way.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-fullscreen-2.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-fullscreen.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-move.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-reload.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-1.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-2.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-3.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-4.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-5.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-resize-6.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-shuffle.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-down.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-left.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-thin-down.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-thin-up.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thick-up.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-down.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-left-bottom.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-left-top.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-left.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-right-bottom.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-right-top.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-thin-up.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-three-way-1.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-three-way-2.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-triangle-recycle.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-up.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-way-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-way-right-bottom.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-way-right.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-two-way.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-up-down.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-arrow-wave.svg" />
+    <Content Include="Content\Svg\si-glyph-art-board.svg" />
+    <Content Include="Content\Svg\si-glyph-askterisk.svg" />
+    <Content Include="Content\Svg\si-glyph-atm-card.svg" />
+    <Content Include="Content\Svg\si-glyph-axe.svg" />
+    <Content Include="Content\Svg\si-glyph-baby-milk-botl.svg" />
+    <Content Include="Content\Svg\si-glyph-baby-stroller.svg" />
+    <Content Include="Content\Svg\si-glyph-baby-troller.svg" />
+    <Content Include="Content\Svg\si-glyph-baby.svg" />
+    <Content Include="Content\Svg\si-glyph-back-pack.svg" />
+    <Content Include="Content\Svg\si-glyph-backward-page.svg" />
+    <Content Include="Content\Svg\si-glyph-badge-name.svg" />
+    <Content Include="Content\Svg\si-glyph-bag-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-bag-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-bag.svg" />
+    <Content Include="Content\Svg\si-glyph-balance.svg" />
+    <Content Include="Content\Svg\si-glyph-balloon.svg" />
+    <Content Include="Content\Svg\si-glyph-bandage.svg" />
+    <Content Include="Content\Svg\si-glyph-bank.svg" />
+    <Content Include="Content\Svg\si-glyph-barcode.svg" />
+    <Content Include="Content\Svg\si-glyph-barrier.svg" />
+    <Content Include="Content\Svg\si-glyph-baseball-stick.svg" />
+    <Content Include="Content\Svg\si-glyph-baseball.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-error.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-basket-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-basket.svg" />
+    <Content Include="Content\Svg\si-glyph-basketball.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-charging.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-empty.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-full.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-half-2.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-half.svg" />
+    <Content Include="Content\Svg\si-glyph-battery-low.svg" />
+    <Content Include="Content\Svg\si-glyph-bed.svg" />
+    <Content Include="Content\Svg\si-glyph-bell.svg" />
+    <Content Include="Content\Svg\si-glyph-bicycle-1.svg" />
+    <Content Include="Content\Svg\si-glyph-bicycle-3.svg" />
+    <Content Include="Content\Svg\si-glyph-bicycle-man.svg" />
+    <Content Include="Content\Svg\si-glyph-bikini.svg" />
+    <Content Include="Content\Svg\si-glyph-billiard-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-binocular.svg" />
+    <Content Include="Content\Svg\si-glyph-birthday-cake.svg" />
+    <Content Include="Content\Svg\si-glyph-biscuit.svg" />
+    <Content Include="Content\Svg\si-glyph-blender.svg" />
+    <Content Include="Content\Svg\si-glyph-blood-bag.svg" />
+    <Content Include="Content\Svg\si-glyph-bluetooth.svg" />
+    <Content Include="Content\Svg\si-glyph-board.svg" />
+    <Content Include="Content\Svg\si-glyph-boat.svg" />
+    <Content Include="Content\Svg\si-glyph-bolt.svg" />
+    <Content Include="Content\Svg\si-glyph-bomb-1.svg" />
+    <Content Include="Content\Svg\si-glyph-bomb-2.svg" />
+    <Content Include="Content\Svg\si-glyph-bone.svg" />
+    <Content Include="Content\Svg\si-glyph-book-%40.svg" />
+    <Content Include="Content\Svg\si-glyph-book-1.svg" />
+    <Content Include="Content\Svg\si-glyph-book-3.svg" />
+    <Content Include="Content\Svg\si-glyph-book-4.svg" />
+    <Content Include="Content\Svg\si-glyph-book-open.svg" />
+    <Content Include="Content\Svg\si-glyph-book-person.svg" />
+    <Content Include="Content\Svg\si-glyph-bookcase.svg" />
+    <Content Include="Content\Svg\si-glyph-bookmark.svg" />
+    <Content Include="Content\Svg\si-glyph-botl-2.svg" />
+    <Content Include="Content\Svg\si-glyph-botl-milk.svg" />
+    <Content Include="Content\Svg\si-glyph-bow-tie.svg" />
+    <Content Include="Content\Svg\si-glyph-box-download.svg" />
+    <Content Include="Content\Svg\si-glyph-box-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-box.svg" />
+    <Content Include="Content\Svg\si-glyph-bread.svg" />
+    <Content Include="Content\Svg\si-glyph-briefcase-person.svg" />
+    <Content Include="Content\Svg\si-glyph-briefcase.svg" />
+    <Content Include="Content\Svg\si-glyph-brightness.svg" />
+    <Content Include="Content\Svg\si-glyph-brush-1.svg" />
+    <Content Include="Content\Svg\si-glyph-brush-2.svg" />
+    <Content Include="Content\Svg\si-glyph-brush-and-pencil.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-chat.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-dot-2.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-dot.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-hi.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-quote.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-talk.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message-text.svg" />
+    <Content Include="Content\Svg\si-glyph-bubble-message.svg" />
+    <Content Include="Content\Svg\si-glyph-bucket.svg" />
+    <Content Include="Content\Svg\si-glyph-bug.svg" />
+    <Content Include="Content\Svg\si-glyph-building.svg" />
+    <Content Include="Content\Svg\si-glyph-bullet-checked-list.svg" />
+    <Content Include="Content\Svg\si-glyph-bullet-list-2.svg" />
+    <Content Include="Content\Svg\si-glyph-bullet-list.svg" />
+    <Content Include="Content\Svg\si-glyph-bus.svg" />
+    <Content Include="Content\Svg\si-glyph-button-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-button-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-button-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-button-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-button-buy.svg" />
+    <Content Include="Content\Svg\si-glyph-button-error.svg" />
+    <Content Include="Content\Svg\si-glyph-button-hd.svg" />
+    <Content Include="Content\Svg\si-glyph-button-play.svg" />
+    <Content Include="Content\Svg\si-glyph-button-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-button-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-button-sale.svg" />
+    <Content Include="Content\Svg\si-glyph-button-sell.svg" />
+    <Content Include="Content\Svg\si-glyph-button-starburst.svg" />
+    <Content Include="Content\Svg\si-glyph-button-triangle-up.svg" />
+    <Content Include="Content\Svg\si-glyph-button-tv.svg" />
+    <Content Include="Content\Svg\si-glyph-cabin-cable.svg" />
+    <Content Include="Content\Svg\si-glyph-cabinet.svg" />
+    <Content Include="Content\Svg\si-glyph-calculator-2.svg" />
+    <Content Include="Content\Svg\si-glyph-calculator.svg" />
+    <Content Include="Content\Svg\si-glyph-calendar-1.svg" />
+    <Content Include="Content\Svg\si-glyph-calendar-3.svg" />
+    <Content Include="Content\Svg\si-glyph-calendar-empty.svg" />
+    <Content Include="Content\Svg\si-glyph-call-forward.svg" />
+    <Content Include="Content\Svg\si-glyph-call-reply.svg" />
+    <Content Include="Content\Svg\si-glyph-call.svg" />
+    <Content Include="Content\Svg\si-glyph-camera-projector.svg" />
+    <Content Include="Content\Svg\si-glyph-camera-security.svg" />
+    <Content Include="Content\Svg\si-glyph-camera.svg" />
+    <Content Include="Content\Svg\si-glyph-can-water.svg" />
+    <Content Include="Content\Svg\si-glyph-candle.svg" />
+    <Content Include="Content\Svg\si-glyph-candy-stick.svg" />
+    <Content Include="Content\Svg\si-glyph-candy.svg" />
+    <Content Include="Content\Svg\si-glyph-car-garage.svg" />
+    <Content Include="Content\Svg\si-glyph-car.svg" />
+    <Content Include="Content\Svg\si-glyph-casette.svg" />
+    <Content Include="Content\Svg\si-glyph-cashier-machine.svg" />
+    <Content Include="Content\Svg\si-glyph-castle.svg" />
+    <Content Include="Content\Svg\si-glyph-caterpillar-machine.svg" />
+    <Content Include="Content\Svg\si-glyph-cente-justify.svg" />
+    <Content Include="Content\Svg\si-glyph-chair-1.svg" />
+    <Content Include="Content\Svg\si-glyph-chair-2.svg" />
+    <Content Include="Content\Svg\si-glyph-champion-cup.svg" />
+    <Content Include="Content\Svg\si-glyph-chart-column-decrease.svg" />
+    <Content Include="Content\Svg\si-glyph-chart-column-increase.svg" />
+    <Content Include="Content\Svg\si-glyph-chart-column.svg" />
+    <Content Include="Content\Svg\si-glyph-chart-decrease.svg" />
+    <Content Include="Content\Svg\si-glyph-chart-piece.svg" />
+    <Content Include="Content\Svg\si-glyph-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-cheese.svg" />
+    <Content Include="Content\Svg\si-glyph-cherry.svg" />
+    <Content Include="Content\Svg\si-glyph-christmas-mistletoe.svg" />
+    <Content Include="Content\Svg\si-glyph-christmass-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-christmass-egg.svg" />
+    <Content Include="Content\Svg\si-glyph-christmass-hat.svg" />
+    <Content Include="Content\Svg\si-glyph-christmass-tree.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-backward.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-control-pad.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-drashed.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-error.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-forward.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-help.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-info.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-load-left.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-load-right.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-star.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-triangle-down.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-triangle-left.svg" />
+    <Content Include="Content\Svg\si-glyph-circle-triangle-right.svg" />
+    <Content Include="Content\Svg\si-glyph-circle.svg" />
+    <Content Include="Content\Svg\si-glyph-city.svg" />
+    <Content Include="Content\Svg\si-glyph-clamp.svg" />
+    <Content Include="Content\Svg\si-glyph-clapboard-play.svg" />
+    <Content Include="Content\Svg\si-glyph-clapboard.svg" />
+    <Content Include="Content\Svg\si-glyph-clip.svg" />
+    <Content Include="Content\Svg\si-glyph-clipboard-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-clipboard.svg" />
+    <Content Include="Content\Svg\si-glyph-clock.svg" />
+    <Content Include="Content\Svg\si-glyph-close.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-cloud.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-download.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-heavy-rain.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-rain-heavy-rain.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-snow.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-sun.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-thunder.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-cloud.svg" />
+    <Content Include="Content\Svg\si-glyph-clover.svg" />
+    <Content Include="Content\Svg\si-glyph-cock-pot.svg" />
+    <Content Include="Content\Svg\si-glyph-cocktail.svg" />
+    <Content Include="Content\Svg\si-glyph-coconut.svg" />
+    <Content Include="Content\Svg\si-glyph-code.svg" />
+    <Content Include="Content\Svg\si-glyph-coffee-machine.svg" />
+    <Content Include="Content\Svg\si-glyph-color-picker.svg" />
+    <Content Include="Content\Svg\si-glyph-column-decrease.svg" />
+    <Content Include="Content\Svg\si-glyph-column-increase.svg" />
+    <Content Include="Content\Svg\si-glyph-column-wave.svg" />
+    <Content Include="Content\Svg\si-glyph-comb.svg" />
+    <Content Include="Content\Svg\si-glyph-compass.svg" />
+    <Content Include="Content\Svg\si-glyph-cone.svg" />
+    <Content Include="Content\Svg\si-glyph-congratulation-hat.svg" />
+    <Content Include="Content\Svg\si-glyph-connect-1.svg" />
+    <Content Include="Content\Svg\si-glyph-connect-2.svg" />
+    <Content Include="Content\Svg\si-glyph-contact-book.svg" />
+    <Content Include="Content\Svg\si-glyph-contacter.svg" />
+    <Content Include="Content\Svg\si-glyph-contrast.svg" />
+    <Content Include="Content\Svg\si-glyph-control-pad-.svg" />
+    <Content Include="Content\Svg\si-glyph-corkscrew.svg" />
+    <Content Include="Content\Svg\si-glyph-corner-flag.svg" />
+    <Content Include="Content\Svg\si-glyph-cover-flow.svg" />
+    <Content Include="Content\Svg\si-glyph-cover-food.svg" />
+    <Content Include="Content\Svg\si-glyph-cow.svg" />
+    <Content Include="Content\Svg\si-glyph-cpu.svg" />
+    <Content Include="Content\Svg\si-glyph-cran.svg" />
+    <Content Include="Content\Svg\si-glyph-crop.svg" />
+    <Content Include="Content\Svg\si-glyph-cross-hair-2.svg" />
+    <Content Include="Content\Svg\si-glyph-cross-hair.svg" />
+    <Content Include="Content\Svg\si-glyph-crown.svg" />
+    <Content Include="Content\Svg\si-glyph-cruise.svg" />
+    <Content Include="Content\Svg\si-glyph-cubic.svg" />
+    <Content Include="Content\Svg\si-glyph-cup-cake.svg" />
+    <Content Include="Content\Svg\si-glyph-curtain.svg" />
+    <Content Include="Content\Svg\si-glyph-customer-support.svg" />
+    <Content Include="Content\Svg\si-glyph-dashboard.svg" />
+    <Content Include="Content\Svg\si-glyph-data-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-database-download.svg" />
+    <Content Include="Content\Svg\si-glyph-database-error.svg" />
+    <Content Include="Content\Svg\si-glyph-database-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-database-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-database-share.svg" />
+    <Content Include="Content\Svg\si-glyph-database-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-database.svg" />
+    <Content Include="Content\Svg\si-glyph-delete.svg" />
+    <Content Include="Content\Svg\si-glyph-delicious-circle.svg" />
+    <Content Include="Content\Svg\si-glyph-deny.svg" />
+    <Content Include="Content\Svg\si-glyph-desktop.svg" />
+    <Content Include="Content\Svg\si-glyph-dial-number-1.svg" />
+    <Content Include="Content\Svg\si-glyph-dial-number.svg" />
+    <Content Include="Content\Svg\si-glyph-diamond.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-1.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-2.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-3.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-5.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-6-.svg" />
+    <Content Include="Content\Svg\si-glyph-dice-6.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-add.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-deny.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-download.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-error.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-pause.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-play-2.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-play.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-stop.svg" />
+    <Content Include="Content\Svg\si-glyph-disc-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-disc.svg" />
+    <Content Include="Content\Svg\si-glyph-dish.svg" />
+    <Content Include="Content\Svg\si-glyph-disk-antenna.svg" />
+    <Content Include="Content\Svg\si-glyph-dna.svg" />
+    <Content Include="Content\Svg\si-glyph-document-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-document-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-document-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-document-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-document-backward.svg" />
+    <Content Include="Content\Svg\si-glyph-document-bullet-list.svg" />
+    <Content Include="Content\Svg\si-glyph-document-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-document-copy.svg" />
+    <Content Include="Content\Svg\si-glyph-document-doc.svg" />
+    <Content Include="Content\Svg\si-glyph-document-edit.svg" />
+    <Content Include="Content\Svg\si-glyph-document-error.svg" />
+    <Content Include="Content\Svg\si-glyph-document-forward.svg" />
+    <Content Include="Content\Svg\si-glyph-document-help.svg" />
+    <Content Include="Content\Svg\si-glyph-document-music.svg" />
+    <Content Include="Content\Svg\si-glyph-document-pdf.svg" />
+    <Content Include="Content\Svg\si-glyph-document-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-document-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-document-rss.svg" />
+    <Content Include="Content\Svg\si-glyph-document-search.svg" />
+    <Content Include="Content\Svg\si-glyph-document-star.svg" />
+    <Content Include="Content\Svg\si-glyph-document-warning.svg" />
+    <Content Include="Content\Svg\si-glyph-document.svg" />
+    <Content Include="Content\Svg\si-glyph-dog.svg" />
+    <Content Include="Content\Svg\si-glyph-door.svg" />
+    <Content Include="Content\Svg\si-glyph-downstair.svg" />
+    <Content Include="Content\Svg\si-glyph-downwards-arrow-to-bar.svg" />
+    <Content Include="Content\Svg\si-glyph-drill.svg" />
+    <Content Include="Content\Svg\si-glyph-drop-water.svg" />
+    <Content Include="Content\Svg\si-glyph-dropbox.svg" />
+    <Content Include="Content\Svg\si-glyph-drum.svg" />
+    <Content Include="Content\Svg\si-glyph-easal.svg" />
+    <Content Include="Content\Svg\si-glyph-edit.svg" />
+    <Content Include="Content\Svg\si-glyph-egg.svg" />
+    <Content Include="Content\Svg\si-glyph-eject.svg" />
+    <Content Include="Content\Svg\si-glyph-electron.svg" />
+    <Content Include="Content\Svg\si-glyph-elevator-down.svg" />
+    <Content Include="Content\Svg\si-glyph-elevator-up.svg" />
+    <Content Include="Content\Svg\si-glyph-emoticon.svg" />
+    <Content Include="Content\Svg\si-glyph-end-page.svg" />
+    <Content Include="Content\Svg\si-glyph-erase.svg" />
+    <Content Include="Content\Svg\si-glyph-euro.svg" />
+    <Content Include="Content\Svg\si-glyph-excavator.svg" />
+    <Content Include="Content\Svg\si-glyph-extinguisher.svg" />
+    <Content Include="Content\Svg\si-glyph-eye-drop.svg" />
+    <Content Include="Content\Svg\si-glyph-eye-glass.svg" />
+    <Content Include="Content\Svg\si-glyph-factory.svg" />
+    <Content Include="Content\Svg\si-glyph-faucet.svg" />
+    <Content Include="Content\Svg\si-glyph-feather.svg" />
+    <Content Include="Content\Svg\si-glyph-female.svg" />
+    <Content Include="Content\Svg\si-glyph-fence-2.svg" />
+    <Content Include="Content\Svg\si-glyph-fence.svg" />
+    <Content Include="Content\Svg\si-glyph-file-box.svg" />
+    <Content Include="Content\Svg\si-glyph-file-download.svg" />
+    <Content Include="Content\Svg\si-glyph-file-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-film-35mm.svg" />
+    <Content Include="Content\Svg\si-glyph-film.svg" />
+    <Content Include="Content\Svg\si-glyph-finder.svg" />
+    <Content Include="Content\Svg\si-glyph-finger-up.svg" />
+    <Content Include="Content\Svg\si-glyph-fire-alarm.svg" />
+    <Content Include="Content\Svg\si-glyph-fire-hydrant.svg" />
+    <Content Include="Content\Svg\si-glyph-fire-wood.svg" />
+    <Content Include="Content\Svg\si-glyph-fire.svg" />
+    <Content Include="Content\Svg\si-glyph-first-aid-briefcase.svg" />
+    <Content Include="Content\Svg\si-glyph-fish.svg" />
+    <Content Include="Content\Svg\si-glyph-flag.svg" />
+    <Content Include="Content\Svg\si-glyph-float.svg" />
+    <Content Include="Content\Svg\si-glyph-floppy-disk.svg" />
+    <Content Include="Content\Svg\si-glyph-flower-pot.svg" />
+    <Content Include="Content\Svg\si-glyph-flower.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-contact.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-error.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-music.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-open.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-rss.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-search.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-share.svg" />
+    <Content Include="Content\Svg\si-glyph-folder-warning.svg" />
+    <Content Include="Content\Svg\si-glyph-folder.svg" />
+    <Content Include="Content\Svg\si-glyph-foot-sign.svg" />
+    <Content Include="Content\Svg\si-glyph-forcus.svg" />
+    <Content Include="Content\Svg\si-glyph-forklift.svg" />
+    <Content Include="Content\Svg\si-glyph-forward-page.svg" />
+    <Content Include="Content\Svg\si-glyph-fridge.svg" />
+    <Content Include="Content\Svg\si-glyph-fullscreen.svg" />
+    <Content Include="Content\Svg\si-glyph-game-1.svg" />
+    <Content Include="Content\Svg\si-glyph-game-controll.svg" />
+    <Content Include="Content\Svg\si-glyph-gas-station.svg" />
+    <Content Include="Content\Svg\si-glyph-gate.svg" />
+    <Content Include="Content\Svg\si-glyph-gear-1.svg" />
+    <Content Include="Content\Svg\si-glyph-gear.svg" />
+    <Content Include="Content\Svg\si-glyph-ghost.svg" />
+    <Content Include="Content\Svg\si-glyph-gift.svg" />
+    <Content Include="Content\Svg\si-glyph-glass-water.svg" />
+    <Content Include="Content\Svg\si-glyph-global.svg" />
+    <Content Include="Content\Svg\si-glyph-globe.svg" />
+    <Content Include="Content\Svg\si-glyph-glove.svg" />
+    <Content Include="Content\Svg\si-glyph-golf-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-golf-flag.svg" />
+    <Content Include="Content\Svg\si-glyph-guitar.svg" />
+    <Content Include="Content\Svg\si-glyph-hamburger.svg" />
+    <Content Include="Content\Svg\si-glyph-hammer-and-wrench.svg" />
+    <Content Include="Content\Svg\si-glyph-hammer.svg" />
+    <Content Include="Content\Svg\si-glyph-hand-lamp.svg" />
+    <Content Include="Content\Svg\si-glyph-hand-switch.svg" />
+    <Content Include="Content\Svg\si-glyph-hand.svg" />
+    <Content Include="Content\Svg\si-glyph-handcuff.svg" />
+    <Content Include="Content\Svg\si-glyph-hanger.svg" />
+    <Content Include="Content\Svg\si-glyph-hardware.svg" />
+    <Content Include="Content\Svg\si-glyph-hat-chef.svg" />
+    <Content Include="Content\Svg\si-glyph-hat.svg" />
+    <Content Include="Content\Svg\si-glyph-head-set.svg" />
+    <Content Include="Content\Svg\si-glyph-head.svg" />
+    <Content Include="Content\Svg\si-glyph-heart-delete.svg" />
+    <Content Include="Content\Svg\si-glyph-heart-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-heart-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-heart-signal.svg" />
+    <Content Include="Content\Svg\si-glyph-heart.svg" />
+    <Content Include="Content\Svg\si-glyph-helicopter-pad.svg" />
+    <Content Include="Content\Svg\si-glyph-helicopter.svg" />
+    <Content Include="Content\Svg\si-glyph-helm-wheel.svg" />
+    <Content Include="Content\Svg\si-glyph-helmet.svg" />
+    <Content Include="Content\Svg\si-glyph-hightheel.svg" />
+    <Content Include="Content\Svg\si-glyph-history.svg" />
+    <Content Include="Content\Svg\si-glyph-hockey.svg" />
+    <Content Include="Content\Svg\si-glyph-home-page.svg" />
+    <Content Include="Content\Svg\si-glyph-horse-shoe.svg" />
+    <Content Include="Content\Svg\si-glyph-horse.svg" />
+    <Content Include="Content\Svg\si-glyph-hospital.svg" />
+    <Content Include="Content\Svg\si-glyph-house.svg" />
+    <Content Include="Content\Svg\si-glyph-ice-cream.svg" />
+    <Content Include="Content\Svg\si-glyph-id-badge.svg" />
+    <Content Include="Content\Svg\si-glyph-image.svg" />
+    <Content Include="Content\Svg\si-glyph-in-columns.svg" />
+    <Content Include="Content\Svg\si-glyph-inbox-download.svg" />
+    <Content Include="Content\Svg\si-glyph-inbox-upload.svg" />
+    <Content Include="Content\Svg\si-glyph-infinity-2.svg" />
+    <Content Include="Content\Svg\si-glyph-infinity.svg" />
+    <Content Include="Content\Svg\si-glyph-info.svg" />
+    <Content Include="Content\Svg\si-glyph-ipod.svg" />
+    <Content Include="Content\Svg\si-glyph-iron.svg" />
+    <Content Include="Content\Svg\si-glyph-jump-backward.svg" />
+    <Content Include="Content\Svg\si-glyph-jump-double-page-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-jump-forward.svg" />
+    <Content Include="Content\Svg\si-glyph-jump-page-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-jump-page-up-down.svg" />
+    <Content Include="Content\Svg\si-glyph-kette.svg" />
+    <Content Include="Content\Svg\si-glyph-key-2.svg" />
+    <Content Include="Content\Svg\si-glyph-key.svg" />
+    <Content Include="Content\Svg\si-glyph-keyboard.svg" />
+    <Content Include="Content\Svg\si-glyph-knife.svg" />
+    <Content Include="Content\Svg\si-glyph-ladder-pool.svg" />
+    <Content Include="Content\Svg\si-glyph-lamp-desk.svg" />
+    <Content Include="Content\Svg\si-glyph-lamp.svg" />
+    <Content Include="Content\Svg\si-glyph-lavabo.svg" />
+    <Content Include="Content\Svg\si-glyph-law-hammer.svg" />
+    <Content Include="Content\Svg\si-glyph-layout-1.svg" />
+    <Content Include="Content\Svg\si-glyph-layout-2.svg" />
+    <Content Include="Content\Svg\si-glyph-layout-3.svg" />
+    <Content Include="Content\Svg\si-glyph-layout-4.svg" />
+    <Content Include="Content\Svg\si-glyph-leaf.svg" />
+    <Content Include="Content\Svg\si-glyph-left-justify.svg" />
+    <Content Include="Content\Svg\si-glyph-leftwards-arrow-to-bar.svg" />
+    <Content Include="Content\Svg\si-glyph-light-alarm.svg" />
+    <Content Include="Content\Svg\si-glyph-light-bulb.svg" />
+    <Content Include="Content\Svg\si-glyph-light-house.svg" />
+    <Content Include="Content\Svg\si-glyph-like-unlike.svg" />
+    <Content Include="Content\Svg\si-glyph-like.svg" />
+    <Content Include="Content\Svg\si-glyph-line-two-angle-point.svg" />
+    <Content Include="Content\Svg\si-glyph-link-1.svg" />
+    <Content Include="Content\Svg\si-glyph-link-2.svg" />
+    <Content Include="Content\Svg\si-glyph-link-3.svg" />
+    <Content Include="Content\Svg\si-glyph-load.svg" />
+    <Content Include="Content\Svg\si-glyph-lock-unlock.svg" />
+    <Content Include="Content\Svg\si-glyph-lock.svg" />
+    <Content Include="Content\Svg\si-glyph-louder-2.svg" />
+    <Content Include="Content\Svg\si-glyph-louder-speaker.svg" />
+    <Content Include="Content\Svg\si-glyph-magnet.svg" />
+    <Content Include="Content\Svg\si-glyph-magnifier-2.svg" />
+    <Content Include="Content\Svg\si-glyph-magnifier.svg" />
+    <Content Include="Content\Svg\si-glyph-mail-box.svg" />
+    <Content Include="Content\Svg\si-glyph-mail-empty.svg" />
+    <Content Include="Content\Svg\si-glyph-mail-has-mail.svg" />
+    <Content Include="Content\Svg\si-glyph-mail-inbox.svg" />
+    <Content Include="Content\Svg\si-glyph-mail-send.svg" />
+    <Content Include="Content\Svg\si-glyph-mail.svg" />
+    <Content Include="Content\Svg\si-glyph-male.svg" />
+    <Content Include="Content\Svg\si-glyph-man-doctor.svg" />
+    <Content Include="Content\Svg\si-glyph-map-3.svg" />
+    <Content Include="Content\Svg\si-glyph-map-square.svg" />
+    <Content Include="Content\Svg\si-glyph-mark-snorker.svg" />
+    <Content Include="Content\Svg\si-glyph-mask-1.svg" />
+    <Content Include="Content\Svg\si-glyph-mask-2.svg" />
+    <Content Include="Content\Svg\si-glyph-medal-star.svg" />
+    <Content Include="Content\Svg\si-glyph-microphone-1.svg" />
+    <Content Include="Content\Svg\si-glyph-microphone-2.svg" />
+    <Content Include="Content\Svg\si-glyph-microscope.svg" />
+    <Content Include="Content\Svg\si-glyph-mobile.svg" />
+    <Content Include="Content\Svg\si-glyph-mocule.svg" />
+    <Content Include="Content\Svg\si-glyph-money-%24.svg" />
+    <Content Include="Content\Svg\si-glyph-money-3.svg" />
+    <Content Include="Content\Svg\si-glyph-money-bag.svg" />
+    <Content Include="Content\Svg\si-glyph-money-coin.svg" />
+    <Content Include="Content\Svg\si-glyph-moon-star.svg" />
+    <Content Include="Content\Svg\si-glyph-motobike.svg" />
+    <Content Include="Content\Svg\si-glyph-mountain.svg" />
+    <Content Include="Content\Svg\si-glyph-movie-play.svg" />
+    <Content Include="Content\Svg\si-glyph-movie-projector.svg" />
+    <Content Include="Content\Svg\si-glyph-multifunction-knife.svg" />
+    <Content Include="Content\Svg\si-glyph-mushrooms.svg" />
+    <Content Include="Content\Svg\si-glyph-music-note.svg" />
+    <Content Include="Content\Svg\si-glyph-music.svg" />
+    <Content Include="Content\Svg\si-glyph-mustache.svg" />
+    <Content Include="Content\Svg\si-glyph-network-2.svg" />
+    <Content Include="Content\Svg\si-glyph-network.svg" />
+    <Content Include="Content\Svg\si-glyph-newspaper.svg" />
+    <Content Include="Content\Svg\si-glyph-no-dog.svg" />
+    <Content Include="Content\Svg\si-glyph-no-smoke.svg" />
+    <Content Include="Content\Svg\si-glyph-note-2.svg" />
+    <Content Include="Content\Svg\si-glyph-note.svg" />
+    <Content Include="Content\Svg\si-glyph-old-phone.svg" />
+    <Content Include="Content\Svg\si-glyph-open.svg" />
+    <Content Include="Content\Svg\si-glyph-pallette.svg" />
+    <Content Include="Content\Svg\si-glyph-paper-clip.svg" />
+    <Content Include="Content\Svg\si-glyph-paper-plane.svg" />
+    <Content Include="Content\Svg\si-glyph-paper-roll.svg" />
+    <Content Include="Content\Svg\si-glyph-paper-shredder.svg" />
+    <Content Include="Content\Svg\si-glyph-pause.svg" />
+    <Content Include="Content\Svg\si-glyph-pawn.svg" />
+    <Content Include="Content\Svg\si-glyph-paypal.svg" />
+    <Content Include="Content\Svg\si-glyph-pen-nib.svg" />
+    <Content Include="Content\Svg\si-glyph-pen.svg" />
+    <Content Include="Content\Svg\si-glyph-pencil.svg" />
+    <Content Include="Content\Svg\si-glyph-percent.svg" />
+    <Content Include="Content\Svg\si-glyph-person-2.svg" />
+    <Content Include="Content\Svg\si-glyph-person-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-person-door-man.svg" />
+    <Content Include="Content\Svg\si-glyph-person-error.svg" />
+    <Content Include="Content\Svg\si-glyph-person-man.svg" />
+    <Content Include="Content\Svg\si-glyph-person-people.svg" />
+    <Content Include="Content\Svg\si-glyph-person-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-person-prison.svg" />
+    <Content Include="Content\Svg\si-glyph-person-public.svg" />
+    <Content Include="Content\Svg\si-glyph-person-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-person-talk.svg" />
+    <Content Include="Content\Svg\si-glyph-person-woman.svg" />
+    <Content Include="Content\Svg\si-glyph-person.svg" />
+    <Content Include="Content\Svg\si-glyph-pet-carrier.svg" />
+    <Content Include="Content\Svg\si-glyph-phone-fax.svg" />
+    <Content Include="Content\Svg\si-glyph-phone-number.svg" />
+    <Content Include="Content\Svg\si-glyph-piano.svg" />
+    <Content Include="Content\Svg\si-glyph-pick.svg" />
+    <Content Include="Content\Svg\si-glyph-picture-2.svg" />
+    <Content Include="Content\Svg\si-glyph-picture-copy.svg" />
+    <Content Include="Content\Svg\si-glyph-picture.svg" />
+    <Content Include="Content\Svg\si-glyph-piggy-bank.svg" />
+    <Content Include="Content\Svg\si-glyph-pill.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-1.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-2.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-add.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-delete.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-love.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-map.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-location.svg" />
+    <Content Include="Content\Svg\si-glyph-pin-map.svg" />
+    <Content Include="Content\Svg\si-glyph-ping-pong-racket.svg" />
+    <Content Include="Content\Svg\si-glyph-pipe.svg" />
+    <Content Include="Content\Svg\si-glyph-pizza.svg" />
+    <Content Include="Content\Svg\si-glyph-plugin.svg" />
+    <Content Include="Content\Svg\si-glyph-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-podium.svg" />
+    <Content Include="Content\Svg\si-glyph-poker-1.svg" />
+    <Content Include="Content\Svg\si-glyph-poker-2.svg" />
+    <Content Include="Content\Svg\si-glyph-poker-3.svg" />
+    <Content Include="Content\Svg\si-glyph-poker-4.svg" />
+    <Content Include="Content\Svg\si-glyph-print.svg" />
+    <Content Include="Content\Svg\si-glyph-puzzle.svg" />
+    <Content Include="Content\Svg\si-glyph-quote-close.svg" />
+    <Content Include="Content\Svg\si-glyph-quote-open.svg" />
+    <Content Include="Content\Svg\si-glyph-radio.svg" />
+    <Content Include="Content\Svg\si-glyph-radioactive.svg" />
+    <Content Include="Content\Svg\si-glyph-record.svg" />
+    <Content Include="Content\Svg\si-glyph-reduce.svg" />
+    <Content Include="Content\Svg\si-glyph-reel-audio.svg" />
+    <Content Include="Content\Svg\si-glyph-reel-film.svg" />
+    <Content Include="Content\Svg\si-glyph-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-repeat.svg" />
+    <Content Include="Content\Svg\si-glyph-resize-in-frame.svg" />
+    <Content Include="Content\Svg\si-glyph-resize-out-frame.svg" />
+    <Content Include="Content\Svg\si-glyph-retroeexcavadora.svg" />
+    <Content Include="Content\Svg\si-glyph-ribbon.svg" />
+    <Content Include="Content\Svg\si-glyph-right-justify.svg" />
+    <Content Include="Content\Svg\si-glyph-rightwards-arrow-to-bar.svg" />
+    <Content Include="Content\Svg\si-glyph-ring.svg" />
+    <Content Include="Content\Svg\si-glyph-road.svg" />
+    <Content Include="Content\Svg\si-glyph-rocket.svg" />
+    <Content Include="Content\Svg\si-glyph-roller.svg" />
+    <Content Include="Content\Svg\si-glyph-rss.svg" />
+    <Content Include="Content\Svg\si-glyph-rugby-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-ruler.svg" />
+    <Content Include="Content\Svg\si-glyph-safe-box.svg" />
+    <Content Include="Content\Svg\si-glyph-safe-pin.svg" />
+    <Content Include="Content\Svg\si-glyph-satellite.svg" />
+    <Content Include="Content\Svg\si-glyph-saw.svg" />
+    <Content Include="Content\Svg\si-glyph-scissor-line-cut.svg" />
+    <Content Include="Content\Svg\si-glyph-scissor.svg" />
+    <Content Include="Content\Svg\si-glyph-screen-ful.svg" />
+    <Content Include="Content\Svg\si-glyph-screen-scale.svg" />
+    <Content Include="Content\Svg\si-glyph-screw-driver.svg" />
+    <Content Include="Content\Svg\si-glyph-screw.svg" />
+    <Content Include="Content\Svg\si-glyph-sd-card.svg" />
+    <Content Include="Content\Svg\si-glyph-seriff.svg" />
+    <Content Include="Content\Svg\si-glyph-sewing-machine.svg" />
+    <Content Include="Content\Svg\si-glyph-sewing-roll.svg" />
+    <Content Include="Content\Svg\si-glyph-share-1.svg" />
+    <Content Include="Content\Svg\si-glyph-share-2.svg" />
+    <Content Include="Content\Svg\si-glyph-share-3.svg" />
+    <Content Include="Content\Svg\si-glyph-share-5.svg" />
+    <Content Include="Content\Svg\si-glyph-sheep.svg" />
+    <Content Include="Content\Svg\si-glyph-shield-2.svg" />
+    <Content Include="Content\Svg\si-glyph-shield-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-shield-star.svg" />
+    <Content Include="Content\Svg\si-glyph-shield.svg" />
+    <Content Include="Content\Svg\si-glyph-shovel.svg" />
+    <Content Include="Content\Svg\si-glyph-shower.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-board.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-foot.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-in.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-out.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-p.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-road-1.svg" />
+    <Content Include="Content\Svg\si-glyph-sign-road-2.svg" />
+    <Content Include="Content\Svg\si-glyph-signal-1.svg" />
+    <Content Include="Content\Svg\si-glyph-signal-2.svg" />
+    <Content Include="Content\Svg\si-glyph-signal-3.svg" />
+    <Content Include="Content\Svg\si-glyph-site-map-revert.svg" />
+    <Content Include="Content\Svg\si-glyph-site-map.svg" />
+    <Content Include="Content\Svg\si-glyph-skateboard.svg" />
+    <Content Include="Content\Svg\si-glyph-skull.svg" />
+    <Content Include="Content\Svg\si-glyph-sleep.svg" />
+    <Content Include="Content\Svg\si-glyph-slide-show.svg" />
+    <Content Include="Content\Svg\si-glyph-smartphone.svg" />
+    <Content Include="Content\Svg\si-glyph-sms.svg" />
+    <Content Include="Content\Svg\si-glyph-snow.svg" />
+    <Content Include="Content\Svg\si-glyph-soccer-yard.svg" />
+    <Content Include="Content\Svg\si-glyph-sock.svg" />
+    <Content Include="Content\Svg\si-glyph-socket.svg" />
+    <Content Include="Content\Svg\si-glyph-solar-blind.svg" />
+    <Content Include="Content\Svg\si-glyph-sos.svg" />
+    <Content Include="Content\Svg\si-glyph-sound-mute.svg" />
+    <Content Include="Content\Svg\si-glyph-sound.svg" />
+    <Content Include="Content\Svg\si-glyph-space-ship.svg" />
+    <Content Include="Content\Svg\si-glyph-spanner.svg" />
+    <Content Include="Content\Svg\si-glyph-spoon-fork.svg" />
+    <Content Include="Content\Svg\si-glyph-spray.svg" />
+    <Content Include="Content\Svg\si-glyph-square-checked.svg" />
+    <Content Include="Content\Svg\si-glyph-square-dashed-1.svg" />
+    <Content Include="Content\Svg\si-glyph-square-dashed-2.svg" />
+    <Content Include="Content\Svg\si-glyph-square-delicious.svg" />
+    <Content Include="Content\Svg\si-glyph-square-eight-angle-point.svg" />
+    <Content Include="Content\Svg\si-glyph-square-four-angle-point.svg" />
+    <Content Include="Content\Svg\si-glyph-square-four.svg" />
+    <Content Include="Content\Svg\si-glyph-square-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-square-star.svg" />
+    <Content Include="Content\Svg\si-glyph-square.svg" />
+    <Content Include="Content\Svg\si-glyph-stamps.svg" />
+    <Content Include="Content\Svg\si-glyph-star-cross.svg" />
+    <Content Include="Content\Svg\si-glyph-star-stick.svg" />
+    <Content Include="Content\Svg\si-glyph-stele.svg" />
+    <Content Include="Content\Svg\si-glyph-stelescope.svg" />
+    <Content Include="Content\Svg\si-glyph-stereo-jack.svg" />
+    <Content Include="Content\Svg\si-glyph-stethoscope.svg" />
+    <Content Include="Content\Svg\si-glyph-store.svg" />
+    <Content Include="Content\Svg\si-glyph-stove.svg" />
+    <Content Include="Content\Svg\si-glyph-strawberry.svg" />
+    <Content Include="Content\Svg\si-glyph-street-2.svg" />
+    <Content Include="Content\Svg\si-glyph-strolley-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-strolley-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-strolley-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-strolley-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-strolley.svg" />
+    <Content Include="Content\Svg\si-glyph-subway.svg" />
+    <Content Include="Content\Svg\si-glyph-suitcase-person.svg" />
+    <Content Include="Content\Svg\si-glyph-suitcase.svg" />
+    <Content Include="Content\Svg\si-glyph-syringe.svg" />
+    <Content Include="Content\Svg\si-glyph-t-shirt.svg" />
+    <Content Include="Content\Svg\si-glyph-tablet.svg" />
+    <Content Include="Content\Svg\si-glyph-tag-1.svg" />
+    <Content Include="Content\Svg\si-glyph-tag-one-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-tag-price.svg" />
+    <Content Include="Content\Svg\si-glyph-tag.svg" />
+    <Content Include="Content\Svg\si-glyph-tank.svg" />
+    <Content Include="Content\Svg\si-glyph-targer.svg" />
+    <Content Include="Content\Svg\si-glyph-tea-cup.svg" />
+    <Content Include="Content\Svg\si-glyph-teeth.svg" />
+    <Content Include="Content\Svg\si-glyph-telephone-box.svg" />
+    <Content Include="Content\Svg\si-glyph-telescope.svg" />
+    <Content Include="Content\Svg\si-glyph-television.svg" />
+    <Content Include="Content\Svg\si-glyph-tennis-racket-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-tent-1.svg" />
+    <Content Include="Content\Svg\si-glyph-tent-camp.svg" />
+    <Content Include="Content\Svg\si-glyph-test-tube-2.svg" />
+    <Content Include="Content\Svg\si-glyph-test-tube-empty.svg" />
+    <Content Include="Content\Svg\si-glyph-test-tube.svg" />
+    <Content Include="Content\Svg\si-glyph-text-search.svg" />
+    <Content Include="Content\Svg\si-glyph-thermometer.svg" />
+    <Content Include="Content\Svg\si-glyph-three-ball.svg" />
+    <Content Include="Content\Svg\si-glyph-tic-tac-toe.svg" />
+    <Content Include="Content\Svg\si-glyph-time-glass.svg" />
+    <Content Include="Content\Svg\si-glyph-time-reload.svg" />
+    <Content Include="Content\Svg\si-glyph-timer.svg" />
+    <Content Include="Content\Svg\si-glyph-toilet.svg" />
+    <Content Include="Content\Svg\si-glyph-tool-box.svg" />
+    <Content Include="Content\Svg\si-glyph-traffic-light.svg" />
+    <Content Include="Content\Svg\si-glyph-train-rail.svg" />
+    <Content Include="Content\Svg\si-glyph-train.svg" />
+    <Content Include="Content\Svg\si-glyph-trash.svg" />
+    <Content Include="Content\Svg\si-glyph-tree.svg" />
+    <Content Include="Content\Svg\si-glyph-trees.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-double-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-double-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-double-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-double-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-down.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-left.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-right.svg" />
+    <Content Include="Content\Svg\si-glyph-triangle-up.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-2.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-arrow-up.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-briefcase.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-error.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-full.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-plus.svg" />
+    <Content Include="Content\Svg\si-glyph-trolley-remove.svg" />
+    <Content Include="Content\Svg\si-glyph-truck.svg" />
+    <Content Include="Content\Svg\si-glyph-trumpet.svg" />
+    <Content Include="Content\Svg\si-glyph-turn-off.svg" />
+    <Content Include="Content\Svg\si-glyph-two-arrow-down.svg" />
+    <Content Include="Content\Svg\si-glyph-two-arrow-in-down-up.svg" />
+    <Content Include="Content\Svg\si-glyph-two-arrow-in-left-right.svg" />
+    <Content Include="Content\Svg\si-glyph-two-arrow-left.svg" />
+    <Content Include="Content\Svg\si-glyph-two-arrow-right.svg" />
+    <Content Include="Content\Svg\si-glyph-typewriter.svg" />
+    <Content Include="Content\Svg\si-glyph-umberlla-chair.svg" />
+    <Content Include="Content\Svg\si-glyph-umbrella-close.svg" />
+    <Content Include="Content\Svg\si-glyph-umbrella-open.svg" />
+    <Content Include="Content\Svg\si-glyph-umbrella-sea.svg" />
+    <Content Include="Content\Svg\si-glyph-upstair.svg" />
+    <Content Include="Content\Svg\si-glyph-upwards-arrow-to-bar.svg" />
+    <Content Include="Content\Svg\si-glyph-upwards-arrow-with-loop.svg" />
+    <Content Include="Content\Svg\si-glyph-usb.svg" />
+    <Content Include="Content\Svg\si-glyph-view.svg" />
+    <Content Include="Content\Svg\si-glyph-wacom-tablet.svg" />
+    <Content Include="Content\Svg\si-glyph-wall.svg" />
+    <Content Include="Content\Svg\si-glyph-wallet.svg" />
+    <Content Include="Content\Svg\si-glyph-wash-machine-2.svg" />
+    <Content Include="Content\Svg\si-glyph-wash-machine.svg" />
+    <Content Include="Content\Svg\si-glyph-watch.svg" />
+    <Content Include="Content\Svg\si-glyph-webcam.svg" />
+    <Content Include="Content\Svg\si-glyph-weight-down.svg" />
+    <Content Include="Content\Svg\si-glyph-weight-kilograms.svg" />
+    <Content Include="Content\Svg\si-glyph-weight-up.svg" />
+    <Content Include="Content\Svg\si-glyph-wheel-chair.svg" />
+    <Content Include="Content\Svg\si-glyph-wheel-steel.svg" />
+    <Content Include="Content\Svg\si-glyph-wieght.svg" />
+    <Content Include="Content\Svg\si-glyph-wifi-1.svg" />
+    <Content Include="Content\Svg\si-glyph-wind-turbines.svg" />
+    <Content Include="Content\Svg\si-glyph-window.svg" />
+    <Content Include="Content\Svg\si-glyph-wood-stove.svg" />
+    <Content Include="Content\Svg\si-glyph-wrench-screwdriver.svg" />
+    <Content Include="Content\Svg\si-glyph-wrench.svg" />
+    <Content Include="Content\Svg\si-glyph-yen.svg" />
+    <Content Include="Content\Svg\si-glyph-ying-yang.svg" />
+    <Content Include="Content\Svg\si-glyph-zip.svg" />
+    <Content Include="Content\Svg\si-glyph-zoom-in.svg" />
+    <Content Include="Content\Svg\si-glyph-zoom-out.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Img\Logo.png" />
+    <Content Include="Img\LogoLogin.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\Css\bootstrap-grid.css.map" />
+    <Content Include="Content\Css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\Css\bootstrap-reboot.css.map" />
+    <Content Include="Content\Css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\Css\bootstrap.css.map" />
+    <Content Include="Content\Css\bootstrap.min.css.map" />
+    <Content Include="Content\Script\bootstrap.bundle.js.map" />
+    <Content Include="Content\Script\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\Script\bootstrap.js.map" />
+    <Content Include="Content\Script\bootstrap.min.js.map" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Exames.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1588</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1588/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

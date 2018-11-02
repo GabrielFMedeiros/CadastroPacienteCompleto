@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Exames";
+}
+
+<br />
+<div class="card border-info">
+    <div class="card-header bg-transparent border-info">
+        Procurar por exames:
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-row justify-content-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup">CPF</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><img src="~/Content/Svg/si-glyph-person-2.svg" width="10" height="10" /></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="CPF">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup">Senha</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><img src="~/Content/Svg/si-glyph-sign-in.svg" width="10" height="10" /></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Senha">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group mb-2">
+                        <button class="btn btn-dark" type="button">Procurar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
